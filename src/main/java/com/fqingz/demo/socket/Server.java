@@ -39,6 +39,7 @@ public class Server extends Thread {
             int count = 0;
             //noinspection InfiniteLoopStatement
             while (true){
+                //BIO的阻塞方式
                 socket = serverSocket.accept ();
                 Server server = new Server (socket);
                 server.start ();
